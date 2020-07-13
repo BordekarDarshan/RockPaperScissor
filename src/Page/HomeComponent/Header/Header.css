@@ -1,0 +1,8 @@
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nightVision {
+  padding: 10px;
+}
