@@ -10,7 +10,8 @@ export const decideWinner = (
   setComputer,
   setMessage,
   setPlayerSign,
-  setComputerSign
+  setComputerSign,
+  setShow
 ) => {
   let computerAttack = ["rock", "paper", "scissor"];
   let generateNumber = Math.floor(Math.random() * 3);
@@ -81,6 +82,7 @@ export const decideWinner = (
     setMessage("You Won");
     setPlayerSign(null);
     setComputerSign(null);
+    setShow(true);
   }
 
   if (computer === 3) {
@@ -89,5 +91,6 @@ export const decideWinner = (
     setMessage("Computer Won");
     setPlayerSign(null);
     setComputerSign(null);
+    setShow(true);
   }
 };

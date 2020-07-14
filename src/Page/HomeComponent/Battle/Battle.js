@@ -7,6 +7,7 @@ import rock from "../../../Upload/rock.png";
 import paper from "../../../Upload/paper.png";
 import scissor from "../../../Upload/scissor.png";
 import "./Battle.css";
+import PopUp from "../../../Components/ModalPop/PopUp";
 
 function Battle() {
   const [player, setPlayer] = useState(0);
@@ -14,7 +15,9 @@ function Battle() {
   const [message, setMessage] = useState(null);
   const [playerSign, setPlayerSign] = useState(null);
   const [computerSign, setComputerSign] = useState(null);
+  const [show, setShow] = useState(false);
 
+  const handleClose = () => setShow(false);
   return (
     <div className="battleArea">
       <div className="playerArea">
@@ -34,7 +37,8 @@ function Battle() {
                   setComputer,
                   setMessage,
                   setPlayerSign,
-                  setComputerSign
+                  setComputerSign,
+                  setShow
                 )
               }
               key={index}
@@ -65,6 +69,7 @@ function Battle() {
           {computerSign && <img src={computerSign} alt="sign"></img>}
         </Signbox>
       </div>
+      <PopUp show={show} handleClose={handleClose} message={message}></PopUp>
     </div>
   );
 }
