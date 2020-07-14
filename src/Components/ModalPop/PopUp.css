@@ -1,0 +1,39 @@
+.modal-content {
+  background-color: #212529 !important;
+}
+
+.modal-header {
+  border: none !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+
+.modal-body {
+  color: rgb(144, 164, 174);
+  font-weight: bolder;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.btnCloseModal {
+  background-color: transparent !important;
+  margin: 5px !important;
+  border: rgb(144, 164, 174) 1px solid !important;
+  box-shadow: none !important;
+  color: white !important;
+  width: 120px;
+  display: flex !important;
+  align-self: flex-end !important;
+  justify-content: center;
+}
+
+.close {
+  color: white !important;
+  border: none !important;
+  padding: 1px !important;
+  margin: 0 !important;
+  font-size: 40px !important;
+  text-shadow: none !important;
+  outline: none !important;
+}

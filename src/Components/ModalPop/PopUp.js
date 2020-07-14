@@ -8,8 +8,8 @@ function PopUp({ show, handleClose, message }) {
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>{message}</Modal.Body>
-        <Button variant="secondary" onClick={handleClose}>
-          Close
+        <Button onClick={handleClose} className="btnCloseModal">
+          Play Again
         </Button>
       </Modal>
     </>
