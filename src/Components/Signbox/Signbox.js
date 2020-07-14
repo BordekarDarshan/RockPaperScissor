@@ -1,7 +1,8 @@
 import React from "react";
+import "./Signbox.css";
 
-function Signbox() {
-  return <div className="signArea"></div>;
+function Signbox({ children }) {
+  return <div className="signBox">{children}</div>;
 }
 
 export default Signbox;

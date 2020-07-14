@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import Heading from "../../../Components/Heading/Heading";
+import Scorebox from "../../../Components/Scorebox/Scorebox";
+import Signbox from "../../../Components/Signbox/Signbox";
 import { decideWinner } from "../../../Util/decideWinner";
+import rock from "../../../Upload/rock.png";
+import paper from "../../../Upload/paper.png";
+import scissor from "../../../Upload/scissor.png";
 import "./Battle.css";
 
 function Battle() {
@@ -12,32 +17,42 @@ function Battle() {
     <div className="battleArea">
       <div className="playerArea">
         <Heading>Player</Heading>
-        {["rock", "paper", "scissor"].map((btn) => (
-          <button
-            onClick={() =>
-              decideWinner(
-                player,
-                computer,
-                btn,
-                setPlayer,
-                setComputer,
-                setMessage
-              )
-            }
-          >
-            {btn}
-          </button>
-        ))}
+        <Signbox></Signbox>
+        <div className="attack">
+          {["rock", "paper", "scissor"].map((playerChoice, index) => (
+            <button
+              onClick={() =>
+                decideWinner(
+                  player,
+                  computer,
+                  playerChoice,
+                  setPlayer,
+                  setComputer,
+                  setMessage
+                )
+              }
+              key={index}
+              className="btn handSign"
+            >
+              <span className="hh">
+                {playerChoice === "rock" && <img src={rock} />}
+                {playerChoice === "paper" && <img src={paper} />}
+                {playerChoice === "scissor" && <img src={scissor} />}
+              </span>
+            </button>
+          ))}
+        </div>
       </div>
       <div className="scoreArea">
         <Heading>Score</Heading>
-        <h1 className="text-white">
-          {player}:{computer}
-        </h1>
-        <h1 className="text-white">{message}</h1>
+        <div className="scoreBoard">
+          <Scorebox>{player}</Scorebox>
+          <Scorebox>{computer}</Scorebox>
+        </div>
       </div>
       <div className="computerArea">
         <Heading>Computer</Heading>
+        <Signbox></Signbox>
       </div>
     </div>
   );
