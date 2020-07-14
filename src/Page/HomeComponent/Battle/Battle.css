@@ -7,6 +7,19 @@
 .playerArea {
   display: flex;
   flex-flow: column;
+  order: 1;
+}
+
+.computerArea {
+  display: flex;
+  flex-flow: column;
+  order: 2;
+}
+
+.scoreArea {
+  display: flex;
+  flex-flow: column;
+  order: 2;
 }
 
 .attack {
@@ -45,4 +58,22 @@
 
 .msgBox > span {
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .playerArea {
+    order: 1;
+    width: 50%;
+  }
+  .computerArea {
+    order: 2;
+    width: 50%;
+  }
+  .scoreArea {
+    order: 3;
+  }
+  .attack {
+    width: 50%;
+    align-self: center;
+  }
 }
