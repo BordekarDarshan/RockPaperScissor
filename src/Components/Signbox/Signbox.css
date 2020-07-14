@@ -4,5 +4,13 @@
   border: 7px #778899 solid;
   align-self: center;
   border-radius: 10px;
-  background-color: #d8dcd6;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signBox > img {
+  width: 70%;
+  height: 90%;
 }

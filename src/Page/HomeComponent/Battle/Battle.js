@@ -12,12 +12,16 @@ function Battle() {
   const [player, setPlayer] = useState(0);
   const [computer, setComputer] = useState(0);
   const [message, setMessage] = useState(null);
+  const [playerSign, setPlayerSign] = useState("");
+  const [computerSign, setComputerSign] = useState("");
 
   return (
     <div className="battleArea">
       <div className="playerArea">
         <Heading>Player</Heading>
-        <Signbox></Signbox>
+        <Signbox>
+          <img src={playerSign}></img>
+        </Signbox>
         <div className="attack">
           {["rock", "paper", "scissor"].map((playerChoice, index) => (
             <button
@@ -28,7 +32,9 @@ function Battle() {
                   playerChoice,
                   setPlayer,
                   setComputer,
-                  setMessage
+                  setMessage,
+                  setPlayerSign,
+                  setComputerSign
                 )
               }
               key={index}
@@ -52,7 +58,9 @@ function Battle() {
       </div>
       <div className="computerArea">
         <Heading>Computer</Heading>
-        <Signbox></Signbox>
+        <Signbox>
+          <img src={computerSign}></img>
+        </Signbox>
       </div>
     </div>
   );
