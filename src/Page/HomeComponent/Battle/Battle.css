@@ -73,7 +73,10 @@
     order: 3;
   }
   .attack {
-    width: 50%;
+    width: 150px;
     align-self: center;
+  }
+  .handSign {
+    padding: 5px !important;
   }
 }
