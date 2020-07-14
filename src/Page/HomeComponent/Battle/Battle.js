@@ -12,15 +12,15 @@ function Battle() {
   const [player, setPlayer] = useState(0);
   const [computer, setComputer] = useState(0);
   const [message, setMessage] = useState(null);
-  const [playerSign, setPlayerSign] = useState("");
-  const [computerSign, setComputerSign] = useState("");
+  const [playerSign, setPlayerSign] = useState(null);
+  const [computerSign, setComputerSign] = useState(null);
 
   return (
     <div className="battleArea">
       <div className="playerArea">
         <Heading>Player</Heading>
         <Signbox>
-          <img src={playerSign}></img>
+          {playerSign && <img src={playerSign} alt="sign"></img>}
         </Signbox>
         <div className="attack">
           {["rock", "paper", "scissor"].map((playerChoice, index) => (
@@ -41,9 +41,9 @@ function Battle() {
               className="btn handSign"
             >
               <span className="hh">
-                {playerChoice === "rock" && <img src={rock} />}
-                {playerChoice === "paper" && <img src={paper} />}
-                {playerChoice === "scissor" && <img src={scissor} />}
+                {playerChoice === "rock" && <img src={rock} alt="sign" />}
+                {playerChoice === "paper" && <img src={paper} alt="sign" />}
+                {playerChoice === "scissor" && <img src={scissor} alt="sign" />}
               </span>
             </button>
           ))}
@@ -59,7 +59,7 @@ function Battle() {
       <div className="computerArea">
         <Heading>Computer</Heading>
         <Signbox>
-          <img src={computerSign}></img>
+          {computerSign && <img src={computerSign} alt="sign"></img>}
         </Signbox>
       </div>
     </div>
