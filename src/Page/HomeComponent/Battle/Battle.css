@@ -31,3 +31,18 @@
   display: flex;
   justify-content: space-between;
 }
+
+.msgBox {
+  width: 160px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3d4c51;
+  border-radius: 5px;
+  margin: 5% 0 5% 0;
+}
+
+.msgBox > span {
+  text-align: center;
+}

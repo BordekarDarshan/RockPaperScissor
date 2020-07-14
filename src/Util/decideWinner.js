@@ -33,19 +33,19 @@ export const decideWinner = (
     );
     setPlayer(player);
     setComputer(computer);
-    setMessage("Tie");
+    setMessage("It was a draw");
   }
   if (playerChoice === "rock") {
     setPlayerSign(rock);
     if (computerChoice === "paper") {
       setComputerSign(paper);
       setComputer(computer + 1);
-      setMessage("computer won this round");
+      setMessage("computer won this round!");
     }
     if (computerChoice === "scissor") {
       setComputerSign(scissor);
       setPlayer(player + 1);
-      setMessage("player won this round");
+      setMessage("You won this round!");
     }
   }
   if (playerChoice === "paper") {
@@ -53,12 +53,12 @@ export const decideWinner = (
     if (computerChoice === "scissor") {
       setComputerSign(scissor);
       setComputer(computer + 1);
-      setMessage("computer won this round");
+      setMessage("computer won this round!");
     }
     if (computerChoice === "rock") {
       setComputerSign(rock);
       setPlayer(player + 1);
-      setMessage("player won this round");
+      setMessage("You won this round!");
     }
   }
   if (playerChoice === "scissor") {
@@ -66,24 +66,28 @@ export const decideWinner = (
     if (computerChoice === "rock") {
       setComputerSign(rock);
       setComputer(computer + 1);
-      setMessage("computer won this round");
+      setMessage("computer won this round!");
     }
     if (computerChoice === "paper") {
       setComputerSign(paper);
       setPlayer(player + 1);
-      setMessage("player won this round");
+      setMessage("You won this round!");
     }
   }
 
   if (player === 3) {
     setPlayer(0);
     setComputer(0);
-    setMessage("player won");
+    setMessage("You Won");
+    setPlayerSign(null);
+    setComputerSign(null);
   }
 
   if (computer === 3) {
     setPlayer(0);
     setComputer(0);
-    setMessage("computer won");
+    setMessage("Computer Won");
+    setPlayerSign(null);
+    setComputerSign(null);
   }
 };

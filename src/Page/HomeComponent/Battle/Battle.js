@@ -55,6 +55,9 @@ function Battle() {
           <Scorebox>{player}</Scorebox>
           <Scorebox>{computer}</Scorebox>
         </div>
+        <div className="msgBox">
+          <span className="text-white">{message}</span>
+        </div>
       </div>
       <div className="computerArea">
         <Heading>Computer</Heading>

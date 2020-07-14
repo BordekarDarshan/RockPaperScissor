@@ -1,10 +1,9 @@
 .signBox {
   width: 250px;
   height: 250px;
-  border: 7px #778899 solid;
+  border: 2px rgb(144, 164, 174) solid;
   align-self: center;
   border-radius: 10px;
-  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
