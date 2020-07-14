@@ -11,5 +11,7 @@ header {
 @media screen and (max-width: 768px) {
   header {
     padding: 5px;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: lighter;
   }
 }
