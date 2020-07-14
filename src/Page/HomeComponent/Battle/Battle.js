@@ -18,6 +18,24 @@ function Battle() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
+
+  if (player === 3) {
+    setPlayer(0);
+    setComputer(0);
+    setMessage("You Won");
+    setPlayerSign(null);
+    setComputerSign(null);
+    setShow(true);
+  }
+
+  if (computer === 3) {
+    setPlayer(0);
+    setComputer(0);
+    setMessage("Computer Won");
+    setPlayerSign(null);
+    setComputerSign(null);
+    setShow(true);
+  }
   return (
     <div className="battleArea">
       <div className="playerArea">

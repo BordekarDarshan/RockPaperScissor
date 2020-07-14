@@ -75,22 +75,4 @@ export const decideWinner = (
       setMessage("You won this round!");
     }
   }
-
-  if (player === 3) {
-    setPlayer(0);
-    setComputer(0);
-    setMessage("You Won");
-    setPlayerSign(null);
-    setComputerSign(null);
-    setShow(true);
-  }
-
-  if (computer === 3) {
-    setPlayer(0);
-    setComputer(0);
-    setMessage("Computer Won");
-    setPlayerSign(null);
-    setComputerSign(null);
-    setShow(true);
-  }
 };
