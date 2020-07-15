@@ -9,7 +9,7 @@ import scissor from "../../../Upload/scissor.png";
 import "./Battle.css";
 import PopUp from "../../../Components/ModalPop/PopUp";
 
-function Battle() {
+function Battle(props) {
   const [player, setPlayer] = useState(0);
   const [computer, setComputer] = useState(0);
   const [message, setMessage] = useState(null);
@@ -17,25 +17,30 @@ function Battle() {
   const [computerSign, setComputerSign] = useState(null);
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
+  console.log(player, computer);
 
-  if (player === 3) {
-    setPlayer(0);
-    setComputer(0);
-    setMessage("You Won");
+  const handleClose = () => {
+    setShow(false);
     setPlayerSign(null);
     setComputerSign(null);
-    setShow(true);
-  }
+    setMessage(null);
+  };
 
-  if (computer === 3) {
-    setPlayer(0);
-    setComputer(0);
-    setMessage("Computer Won");
-    setPlayerSign(null);
-    setComputerSign(null);
-    setShow(true);
-  }
+  setTimeout(() => {
+    if (computer === 3) {
+      setMessage("Computer Won");
+      setShow(true);
+      setPlayer(0);
+      setComputer(0);
+    }
+    if (player === 3) {
+      setMessage("You Won");
+      setShow(true);
+      setPlayer(0);
+      setComputer(0);
+    }
+  }, 500);
+
   return (
     <div className="battleArea">
       <div className="playerArea">
