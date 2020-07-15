@@ -9,15 +9,13 @@ import scissor from "../../../Upload/scissor.png";
 import "./Battle.css";
 import PopUp from "../../../Components/ModalPop/PopUp";
 
-function Battle(props) {
+function Battle() {
   const [player, setPlayer] = useState(0);
   const [computer, setComputer] = useState(0);
   const [message, setMessage] = useState(null);
   const [playerSign, setPlayerSign] = useState(null);
   const [computerSign, setComputerSign] = useState(null);
   const [show, setShow] = useState(false);
-
-  console.log(player, computer);
 
   const handleClose = () => {
     setShow(false);
@@ -39,7 +37,7 @@ function Battle(props) {
       setPlayer(0);
       setComputer(0);
     }
-  }, 500);
+  }, 300);
 
   return (
     <div className="battleArea">
@@ -65,9 +63,9 @@ function Battle(props) {
                 )
               }
               key={index}
-              className="btn handSign"
+              className="btn handSign "
             >
-              <span className="hh">
+              <span className="hh ">
                 {playerChoice === "rock" && <img src={rock} alt="sign" />}
                 {playerChoice === "paper" && <img src={paper} alt="sign" />}
                 {playerChoice === "scissor" && <img src={scissor} alt="sign" />}

@@ -18,20 +18,12 @@ export const decideWinner = (
   const computerChoice = computerAttack[generateNumber];
 
   if (playerChoice === computerChoice) {
-    setPlayerSign(
-      playerChoice === "rock"
-        ? playerChoice === "paper"
-          ? paper
-          : rock
-        : scissor
-    );
-    setComputerSign(
-      computerChoice === "rock"
-        ? computerChoice === "paper"
-          ? paper
-          : rock
-        : scissor
-    );
+    setPlayerSign(playerChoice);
+
+    computerChoice === "rock" && setComputerSign(rock);
+    computerChoice === "paper" && setComputerSign(paper);
+    computerChoice === "scissor" && setComputerSign(scissor);
+
     setPlayer(player);
     setComputer(computer);
     setMessage("It was a draw");
