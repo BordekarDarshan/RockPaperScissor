@@ -24,6 +24,7 @@
 
 .attack {
   display: flex;
+  width: 250px;
   justify-content: space-between;
   margin: 5% 0 5% 0;
   border-radius: 3px;
@@ -72,7 +73,10 @@
   .scoreArea {
     order: 3;
   }
-
+  .attack {
+    width: 150px;
+    align-self: center;
+  }
   .handSign {
     padding: 5px !important;
   }
