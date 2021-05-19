@@ -10,8 +10,9 @@ header {
 
 @media screen and (max-width: 768px) {
   header {
-    padding: 5px;
-    font-family: "Open Sans Condensed", sans-serif;
-    font-weight: lighter;
+    box-sizing: border-box;
+    padding: 1rem 5px;
+    font-family: "Montserrat", cursive;
+    font-weight: 400;
   }
 }

@@ -1,6 +1,6 @@
-import rock from "../Upload/rock.png";
-import paper from "../Upload/paper.png";
-import scissor from "../Upload/scissor.png";
+import rock from "../Upload/NewRock.png";
+import paper from "../Upload/NewPaper.png";
+import scissor from "../Upload/NewScissor.png";
 
 export const decideWinner = (
   player,

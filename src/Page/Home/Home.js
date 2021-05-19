@@ -6,10 +6,8 @@ import "./Home.css";
 function Home() {
   return (
     <div className="background">
-      <div className="container-fluid">
-        <Header></Header>
-        <Battle></Battle>
-      </div>
+      <Header></Header>
+      <Battle></Battle>
     </div>
   );
 }

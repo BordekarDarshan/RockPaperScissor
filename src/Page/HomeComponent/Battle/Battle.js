@@ -43,7 +43,7 @@ function Battle() {
     <div className="battleArea">
       <div className="playerArea">
         <Heading>Player</Heading>
-        <Signbox>
+        <Signbox computer={false}>
           {playerSign && <img src={playerSign} alt="sign"></img>}
         </Signbox>
         <div className="attack">
@@ -65,7 +65,7 @@ function Battle() {
               key={index}
               className="btn handSign "
             >
-              <span className="hh ">
+              <span className="hh">
                 {playerChoice === "rock" && <img src={rock} alt="sign" />}
                 {playerChoice === "paper" && <img src={paper} alt="sign" />}
                 {playerChoice === "scissor" && <img src={scissor} alt="sign" />}
@@ -86,7 +86,7 @@ function Battle() {
       </div>
       <div className="computerArea">
         <Heading>Computer</Heading>
-        <Signbox>
+        <Signbox computer={true}>
           {computerSign && <img src={computerSign} alt="sign"></img>}
         </Signbox>
       </div>

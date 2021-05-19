@@ -9,15 +9,35 @@
   justify-content: center;
 }
 
+.computer-signbox {
+  width: 250px;
+  height: 250px;
+  border: 2px rgb(144, 164, 174) solid;
+  align-self: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .signBox > img {
-  width: 70%;
-  height: 90%;
+  width: 60%;
+  height: 60%;
+}
+
+.computer-signbox > img {
+  width: 60%;
+  height: 60%;
+  transform: rotateY(180deg);
 }
 
 @media screen and (max-width: 768px) {
   .signBox {
-    width: 150px;
-    height: 150px;
-    background-color: white;
+    width: 130px;
+    height: 130px;
+  }
+  .computer-signbox {
+    width: 130px;
+    height: 130px;
   }
 }
