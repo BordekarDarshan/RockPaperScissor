@@ -1,6 +1,11 @@
 .battleArea {
   display: flex;
   flex-wrap: wrap;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+.battle-area-first-section {
+  display: flex;
   justify-content: space-evenly;
 }
 
@@ -16,23 +21,16 @@
   order: 2;
 }
 
-.scoreArea {
-  display: flex;
-  flex-flow: column;
-  order: 2;
-}
-
 .attack {
   display: flex;
-  width: 250px;
+  width: 350px;
   justify-content: space-between;
-  margin: 5% 0 5% 0;
+  margin: 1rem 0;
   border-radius: 3px;
-  background-color: #fff;
   align-self: center;
 }
 
-.hh > img {
+.attack > button > img {
   width: 80%;
 }
 
@@ -60,6 +58,12 @@
 .msgBox > span {
   text-align: center;
 }
+.battle-area-second-section {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
 
 @media screen and (max-width: 768px) {
   .playerArea {
@@ -70,13 +74,10 @@
     order: 2;
     width: 50%;
   }
-  .scoreArea {
-    order: 3;
-  }
   .attack {
-    width: 150px;
-    align-self: center;
+    width: auto;
   }
+
   .handSign {
     padding: 5px !important;
   }

@@ -33,7 +33,7 @@ export const decideWinner = (
     if (computerChoice === "paper") {
       setComputerSign(paper);
       setComputer(computer + 1);
-      setMessage("computer won this round!");
+      setMessage("Computer won this round!");
     }
     if (computerChoice === "scissor") {
       setComputerSign(scissor);
@@ -46,7 +46,7 @@ export const decideWinner = (
     if (computerChoice === "scissor") {
       setComputerSign(scissor);
       setComputer(computer + 1);
-      setMessage("computer won this round!");
+      setMessage("Computer won this round!");
     }
     if (computerChoice === "rock") {
       setComputerSign(rock);
@@ -59,7 +59,7 @@ export const decideWinner = (
     if (computerChoice === "rock") {
       setComputerSign(rock);
       setComputer(computer + 1);
-      setMessage("computer won this round!");
+      setMessage("Computer won this round!");
     }
     if (computerChoice === "paper") {
       setComputerSign(paper);

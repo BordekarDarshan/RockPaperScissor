@@ -3,9 +3,9 @@ import Heading from "../../../Components/Heading/Heading";
 import Scorebox from "../../../Components/Scorebox/Scorebox";
 import Signbox from "../../../Components/Signbox/Signbox";
 import { decideWinner } from "../../../Util/decideWinner";
-import rock from "../../../Upload/rock.png";
-import paper from "../../../Upload/paper.png";
-import scissor from "../../../Upload/scissor.png";
+import rock from "../../../Upload/NewRock.png";
+import paper from "../../../Upload/NewPaper.png";
+import scissor from "../../../Upload/NewScissor.png";
 import "./Battle.css";
 import PopUp from "../../../Components/ModalPop/PopUp";
 
@@ -41,11 +41,22 @@ function Battle() {
 
   return (
     <div className="battleArea">
-      <div className="playerArea">
-        <Heading>Player</Heading>
-        <Signbox computer={false}>
-          {playerSign && <img src={playerSign} alt="sign"></img>}
-        </Signbox>
+      <div className="battle-area-first-section">
+        <div className="playerArea">
+          <Heading>Player</Heading>
+          <Signbox computer={false}>
+            {playerSign && <img src={playerSign} alt="sign"></img>}
+          </Signbox>
+        </div>
+
+        <div className="computerArea">
+          <Heading>Computer</Heading>
+          <Signbox computer={true}>
+            {computerSign && <img src={computerSign} alt="sign"></img>}
+          </Signbox>
+        </div>
+      </div>
+      <div className="battle-area-second-section">
         <div className="attack">
           {["rock", "paper", "scissor"].map((playerChoice, index) => (
             <button
@@ -65,30 +76,21 @@ function Battle() {
               key={index}
               className="btn handSign "
             >
-              <span className="hh">
-                {playerChoice === "rock" && <img src={rock} alt="sign" />}
-                {playerChoice === "paper" && <img src={paper} alt="sign" />}
-                {playerChoice === "scissor" && <img src={scissor} alt="sign" />}
-              </span>
+              {playerChoice === "rock" && <img src={rock} alt="sign" />}
+              {playerChoice === "paper" && <img src={paper} alt="sign" />}
+              {playerChoice === "scissor" && <img src={scissor} alt="sign" />}
             </button>
           ))}
         </div>
-      </div>
-      <div className="scoreArea">
-        <Heading>Score</Heading>
-        <div className="scoreBoard">
-          <Scorebox>{player}</Scorebox>
-          <Scorebox>{computer}</Scorebox>
+        <div className="scoreArea">
+          <div className="scoreBoard">
+            <Scorebox>{player}</Scorebox>
+            <Scorebox>{computer}</Scorebox>
+          </div>
+          <div className="msgBox">
+            <span className="text-white">{message}</span>
+          </div>
         </div>
-        <div className="msgBox">
-          <span className="text-white">{message}</span>
-        </div>
-      </div>
-      <div className="computerArea">
-        <Heading>Computer</Heading>
-        <Signbox computer={true}>
-          {computerSign && <img src={computerSign} alt="sign"></img>}
-        </Signbox>
       </div>
       <PopUp show={show} handleClose={handleClose} message={message}></PopUp>
     </div>

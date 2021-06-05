@@ -1,6 +1,6 @@
 .signBox {
-  width: 250px;
-  height: 250px;
+  width: 210px;
+  height: 210px;
   border: 2px rgb(144, 164, 174) solid;
   align-self: center;
   border-radius: 10px;
@@ -10,8 +10,8 @@
 }
 
 .computer-signbox {
-  width: 250px;
-  height: 250px;
+  width: 210px;
+  height: 210px;
   border: 2px rgb(144, 164, 174) solid;
   align-self: center;
   border-radius: 10px;
