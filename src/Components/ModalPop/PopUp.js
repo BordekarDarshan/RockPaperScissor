@@ -6,7 +6,7 @@ function PopUp({ show, handleClose, message }) {
   return (
     <>
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton></Modal.Header>
+        {/* <Modal.Header closeButton></Modal.Header> */}
         <Modal.Body>{message}</Modal.Body>
         <Button onClick={handleClose} className="btnCloseModal">
           Play Again

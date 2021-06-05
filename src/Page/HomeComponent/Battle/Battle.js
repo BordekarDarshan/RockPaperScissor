@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Heading from "../../../Components/Heading/Heading";
 import Scorebox from "../../../Components/Scorebox/Scorebox";
 import Signbox from "../../../Components/Signbox/Signbox";
@@ -16,26 +16,31 @@ function Battle() {
   const [playerSign, setPlayerSign] = useState(null);
   const [computerSign, setComputerSign] = useState(null);
   const [show, setShow] = useState(false);
+  const [disable, setDisable] = useState(false);
 
   const handleClose = () => {
     setShow(false);
     setPlayerSign(null);
     setComputerSign(null);
     setMessage(null);
+    setPlayer(0);
+    setComputer(0);
+    setDisable(false);
   };
+  useEffect(() => {
+    if (computer === 3 || player === 3) {
+      setDisable(true);
+    }
+  }, [computer, player]);
 
   setTimeout(() => {
     if (computer === 3) {
       setMessage("Computer Won");
       setShow(true);
-      setPlayer(0);
-      setComputer(0);
     }
     if (player === 3) {
       setMessage("You Won");
       setShow(true);
-      setPlayer(0);
-      setComputer(0);
     }
   }, 300);
 
@@ -74,6 +79,7 @@ function Battle() {
                 )
               }
               key={index}
+              disabled={disable}
               className="btn handSign "
             >
               {playerChoice === "rock" && <img src={rock} alt="sign" />}
