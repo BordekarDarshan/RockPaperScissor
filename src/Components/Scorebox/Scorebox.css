@@ -15,3 +15,13 @@
   font-weight: bolder;
   font-size: xx-large;
 }
+
+@media screen and (max-width: 768px) {
+  .scoreBox {
+    width: 70px;
+    height: 70px;
+  }
+  .scoreBox > span {
+    font-size: x-large;
+  }
+}

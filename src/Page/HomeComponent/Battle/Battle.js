@@ -88,7 +88,7 @@ function Battle() {
             <Scorebox>{computer}</Scorebox>
           </div>
           <div className="msgBox">
-            <span className="text-white">{message}</span>
+            <span>{message}</span>
           </div>
         </div>
       </div>

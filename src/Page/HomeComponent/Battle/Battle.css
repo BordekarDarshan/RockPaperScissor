@@ -25,7 +25,7 @@
   display: flex;
   width: 350px;
   justify-content: space-between;
-  margin: 1rem 0;
+  margin: 1rem 0 2rem 0;
   border-radius: 3px;
   align-self: center;
 }
@@ -57,6 +57,10 @@
 
 .msgBox > span {
   text-align: center;
+  color: white;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.9px;
 }
 .battle-area-second-section {
   display: flex;
@@ -75,10 +79,27 @@
     width: 50%;
   }
   .attack {
-    width: auto;
+    width: 300px;
   }
 
   .handSign {
     padding: 5px !important;
+  }
+  .attack > button > img {
+    width: 60%;
+  }
+  .msgBox {
+    width: 140px;
+  }
+}
+@media screen and (max-width: 468px) {
+  .attack {
+    width: 290px;
+  }
+}
+
+@media screen and (max-width: 268px) {
+  .attack {
+    width: auto;
   }
 }
